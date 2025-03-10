@@ -1,0 +1,92 @@
+---
+title: "Bosque Digital - Summer School 2025"
+subtitle: "Geoinformática en los ecosistemas forestales"
+author: "Universidad de Córdoba"
+author-title: "Organiza"
+date: "23-junio-2025"
+published-title: "Fecha de inicio"
+abstract: "La Universidad de Córdoba, a través del programa Bosque Digital, organiza un *Summer School* centrado en la aplicación de la geoinformática en ecosistemas forestales. Este programa ofrece formación especializada en tecnologías de análisis geoespacial, teledetección, modelado y sensores activos aplicados a la gestión y conservación de bosques. Dirigido a estudiantes, investigadores y profesionales del sector, el curso combina sesiones teóricas y prácticas con expertos en la materia"
+title-block-banner-color: "#f5eeed"
+title-block-banner: true
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r}
+#| label: load_packages
+#| include: false
+
+library(dplyr)
+library(mapgl)
+library(sf)
+```
+
+
+## Bosque Digital
+
+::::: {.grid}
+::: {.g-col-12 .g-col-md-6}
+![](00_assets/figures/logo-bosque-digital.jpg){fig-align="center" width="545"}
+:::
+
+::: {.g-col-12 .g-col-md-6}
+Bosque Digital es un sistema de microcredenciales MOOC orientado a introducir a estudiantes y profesionales en el uso de herramientas geo-informáticas aplicadas al territorio forestal en entornos SIG. El Mooc-Bosque Digital se centra en un área de conocimiento muy especializada, la geoinformática, con el propósito de ofrecer competencias específicas vinculada al uso de diferentes herramientas tecnológicas y su aplicación práctica al territorio forestal, a partir de las últimas tendencias en este sector. El curso tiene un componente claramente innovador y, está orientado específicamente a los recursos naturales y sistemas forestales.
+:::
+:::::
+
+
+## Summer School 2025
+
+Descripción Summer School ...
+
+
+## Audiencia Objetivo
+
+Audiencia ...
+
+## Fechas
+
+
+## Localización
+
+* Dirección: N-IV, km 396, 14014 Córdoba
+
+* Edificio Da Vinci
+
+```{r}
+#| label: localizacion
+
+## coords
+rabanales_sf <- st_point(c(-4.724533, 37.915041)) |> 
+  st_sfc(crs = 4326) |> 
+  st_as_sf() |> 
+  mutate(Edificio = "Edificio Da Vinci")
+
+# ## mapa
+# mapboxgl(
+#   style = mapbox_style("satellite-streets")
+# ) |> 
+#   fly_to(
+#     center = c(-4.724533, 37.915041),
+#     zoom   = 15
+#   ) |> 
+#   add_markers(
+#     data = rabanales_sf
+#   ) |> 
+#   add_globe_minimap()
+```
+
+```{r}
+maplibre(
+  style = mapgl::maptiler_style("outdoor")
+) |> 
+  fly_to(
+    center = c(-4.724533, 37.915041),
+    zoom   = 15
+  ) |> 
+  add_markers(
+    data = rabanales_sf,
+    popup = "Edificio"
+  )
+```
+
