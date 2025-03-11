@@ -9,12 +9,13 @@ format:
     highlight: tango
     css: 00_assets/styles/styles.css
 
-# Font -------------------------------
+# Font/colors -------------------------
 fontsize: 12pt
 citecolor: purple
 toccolor: teal
 linkcolor: teal
 urlcolor: magenta
+backgroundcolor: '#D4E9C3'
 
 # Figures and tables ------------------
 fig-align: 'center'
@@ -39,7 +40,12 @@ geometry:
   - margin = 1in
   - heightrounded
 linestretch: 1.5
-number-sections: true
+anchor-sections: true
+smooth-scroll: true
+section-divs: true
+
+## TOC + sections --------------------
 toc: true
 toc-depth: 3
 toc-location: right
+number-sections: true
