@@ -102,6 +102,7 @@ fotos_path <- list.files(
 
 sel_foto <- "img/foto-adrian-cidre.jpg"
 cab <- "00_assets/figures/informacion-docentes/Antonio_Cabrera/foto_antonio_cabrera.png"
+varo <- "00_assets/figures/informacion-docentes/m_angeles_varo/foto_m_angeles_varo.jpg"
 ```
 
 {{< fa brands >}}
@@ -120,7 +121,7 @@ div(
     )
   ),
   tags$h5(
-    "Antonio Cabrera",
+    "Adrián Cidre",
     class = "teacher__name"
   ),
   tags$div(
@@ -169,6 +170,41 @@ div(
       tags$i(class = "fa-brands fa-linkedin", style = "margin-right: 8px;"),
       "Linkedin",
       href   = "https://www.linkedin.com/in/antonio-mar%C3%ADa-cabrera-ariza-778b693b/",
+      style  = "text-decoration: none;",
+      target = "_blank"
+    )
+  )
+)
+```
+:::
+
+::: {.g-col-12 .g-col-md-6}
+```{r}
+div(
+  class = "teacher",
+  div(
+    class = "teacher__img-container",
+    tags$img(
+      src   = varo,
+      alt   = "Imagen",
+      class = "teacher__img"
+    )
+  ),
+  tags$h5(
+    "Mª Ángeles Varo",
+    class = "teacher__name"
+  ),
+  tags$div(
+    "Ingeniera de Montes por la Universidad de Córdoba (2005) y Máster en Geomática, Teledetección y Modelos espaciales aplicados a la gestión forestal (2014) con una formación multidisciplinar y actualmente cursando doctorado. Desarrolla su actividad investigadora en la integración de sensores remotos, empleando tecnología de última generación, como el LiDAR, imágenes de muy alta resolución espacial, como RapidEye y WolrdView2, para el estudio de procesos de decaimiento en masas artificiales de pinar, así como su detección temprana.",
+    class = "teacher__desc"
+  ),
+  tags$button(
+    class = "btn teacher__btn",
+    tags$a(
+      class = "teacher__btn-text",
+      tags$i(class = "fa-brands fa-linkedin", style = "margin-right: 8px;"),
+      "Linkedin",
+      href   = "https://www.linkedin.com/in/m%C2%AA-%C3%A1ngeles-varo-72568729/",
       style  = "text-decoration: none;",
       target = "_blank"
     )

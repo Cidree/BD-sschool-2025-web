@@ -22,7 +22,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #6D5D4B;
+  color: #000000;
   font-weight: 300;
   line-height: 1.6;
 }
@@ -49,7 +49,6 @@ body {
   display: grid;
   grid-template-columns: 1fr;  /* Single column layout */
   grid-template-rows: auto auto auto 1fr;  /* Image first, then name, then description, then button */
-  grid-gap: 1.5rem;  /* Adjust the gap between elements */
 }
 
 .teacher__img-container {
@@ -57,12 +56,12 @@ body {
   display: inline-block;  /* Ensure the div wraps the image tightly */
   grid-row: 1 / 2;  /* The image will be placed in the first row */
   width: 100%;  /* Ensure it takes full width of the parent */
-  height: 25rem;
+  height: 20rem;
 }
 
 .teacher__img {
   width: 100%;
-  height: 25rem;
+  height: 20rem;
   object-fit: cover;
   transition: transform 0.3s ease-in-out;
   transform-origin: center center;
@@ -85,7 +84,7 @@ body {
   background-color: #084f04;
   color: #fff;
   font-weight: 500;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
 }
 
 .teacher__desc {
@@ -94,8 +93,9 @@ body {
   text-align: justify;
   padding-left: 1rem;
   padding-right: 1rem;
-  height: 15rem;
-  transform: translateY(-35%);
+  height: 17rem;
+  transform: translateY(-10%);
+  overflow: auto;
 }
 
 .teacher__btn {
