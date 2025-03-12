@@ -27,6 +27,10 @@ body {
   line-height: 1.6;
 }
 
+h2 {
+  border-bottom: 1px solid #bfbfbf;
+}
+
 .btn {
   background-color: #8C6239;
   color: #fff;
@@ -118,4 +122,26 @@ body {
 
 .quarto-title-block .quarto-title-banner {
   background-color: #8C6239;
+}
+
+.logos {
+  place-items: center;
+}
+
+.logo__img {
+  height: 3.5rem;
+}
+
+
+div.callout-important.callout-style-default>.callout-header {
+    background-color: #FFCF99;
+}
+
+div.callout-important.callout {
+    border-left-color: #d9534f;
+    background-color: #ffefe9;
+}
+
+.maplibregl-map  {
+  margin-bottom: 2rem;
 }

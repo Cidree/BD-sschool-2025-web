@@ -19,7 +19,7 @@ citecolor: purple
 toccolor: teal
 linkcolor: teal
 urlcolor: magenta
-backgroundcolor: '#D4E9C3'
+backgroundcolor: '#FFF8F0'
 
 # Figures and tables ------------------
 fig-align: 'center'

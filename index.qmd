@@ -17,6 +17,7 @@ editor_options:
 #| include: false
 
 library(mapgl)
+library(readxl)
 library(shiny)
 library(sf)
 library(tidyverse)
@@ -38,15 +39,33 @@ Bosque Digital es un sistema de microcredenciales MOOC orientado a introducir a 
 
 ## Summer School 2025
 
-Descripción Summer School ...
+Objetivos y enfoque del programa
+
+Beneficios para los estudiantes
+
+Razones para apuntarse
 
 ## Audiencia Objetivo
 
 Audiencia ...
 
-## Fechas
+## Programa
 
-## Localización
+Tablas ...??
+
+## Fechas clave
+
+-   **31 de mayo**: fecha límite de inscripcion
+
+-   **23 de junio**: Día 1 Summer School - Herramientas Geoinformáticas
+
+-   **24 de junio**: Día 2 Summer School - Teledetección e Inteligencia Artificial
+
+-   **25 de junio**: Día 3 Summer School - Teledetección próxima a la Tierra
+
+## Ubicación y logística
+
+El Summer School Bosque Digital se realizará en el Campus Rabanales de la ciudad de Córdoba, más concretamente en el edificio Da Vinci (ver mapa).
 
 -   Dirección: N-IV, km 396, 14014 Córdoba
 
@@ -88,6 +107,20 @@ maplibre(
   add_fullscreen_control()
 ```
 
+El Campus se encuentra a unos 20 minutos en coche de la ciudad de Córdoba, pero se puede ir en un tren de proximidad que tarda 6 minutos desde la estación de Renfe. Puedes consultar los horarios aquí:
+
+```{=html}
+<iframe src="00_assets/data/horarios-tren.pdf" width="100%" height="600px"></iframe>
+```
+
+::: callout-important
+La primera hoja indica las horas de salida de Córdoba (Córdoba Central), y la hora de llegada a Campus Univ. Rabanales.
+
+La segunda hoja indica las horas de salida de Campus Univ. Rabanales, y la hora de llegada a Córdoba (Córdoba Central).
+
+Puedes adquirir los tickets en la página web de [renfe](https://www.renfe.com/es/es){target="_blank"}.
+:::
+
 ## Equipo docente {#sec-teachers}
 
 ```{r}
@@ -110,7 +143,7 @@ div(
     div(
       class = "g-col-12 g-col-md-6 g-col-lg-4",
       teacher_card(
-        name = info[[1]],
+        name      = info[[1]],
         photo.dir = info[[3]],
         desc.dir  = read_file(info[[2]]),
         linkedin  = read_file(info[[4]])
@@ -121,3 +154,47 @@ div(
 
 ```
 
+## Inscripción y costos
+
+## Organizadores y Patrocinadores
+
+```{r}
+#| label: logos
+## read logo images
+logos_vec <- list.files(
+  "00_assets/figures/logos-corporativos/",
+  full.names = TRUE
+) |> 
+  sort()
+
+## read logo urls
+logo_url_tbl <- read_xlsx("00_assets/data/url-logos.xlsx") |> 
+  arrange(logo)
+
+## add HTML
+div(
+  class = "container grid",
+  map2(
+    logos_vec, 
+    logo_url_tbl$url,
+    \(logo, url) div(
+      class = "g-col-6 g-col-lg-4 logos",
+      div(
+        tags$a(
+          href   = url,
+          target = "_blank",
+          tags$img(
+            src   = logo,
+            alt   = "Imagen",
+            class = "logo__img"
+          )
+        )
+      )
+    )
+  )
+)
+```
+
+## Preguntas frecuentes (FAQ)
+
+## Contacto
