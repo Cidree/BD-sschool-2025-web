@@ -16,12 +16,12 @@ editor_options:
 #| label: load_packages
 #| include: false
 
-library(bslib)
-library(dplyr)
 library(mapgl)
-library(magick)
 library(shiny)
 library(sf)
+library(tidyverse)
+
+source("R/utils.R")
 ```
 
 ## Bosque Digital
@@ -91,127 +91,33 @@ maplibre(
 ## Equipo docente {#sec-teachers}
 
 ```{r}
-#| label: teacher_pictures
+#| label: load_teacher_info
 
-fotos_path <- list.files(
-  "C:/Users/User/OneDrive - Universidad de Córdoba/BD-sschool-2025/informacion-docentes",
-  pattern = "foto",
-  recursive = TRUE,
-  full.names = TRUE
-  )
+## get photos dirs
+photo_dirs <- list.dirs("00_assets/informacion-docentes/", recursive = FALSE)
 
-sel_foto <- "img/foto-adrian-cidre.jpg"
-cab <- "00_assets/figures/informacion-docentes/Antonio_Cabrera/foto_antonio_cabrera.png"
-varo <- "00_assets/figures/informacion-docentes/m_angeles_varo/foto_m_angeles_varo.jpg"
+## get info for all teachers 
+info_list <- map(photo_dirs, get_teacher_info)
 ```
 
 {{< fa brands >}}
 
-::::: {.container .grid .mt-5}
-::: {.g-col-12 .g-col-md-6}
 ```{r}
+#| label: teacher_cards
 div(
-  class = "teacher",
-  div(
-    class = "teacher__img-container",
-    tags$img(
-      src   = sel_foto,
-      alt   = "Imagen",
-      class = "teacher__img"
+  class = "container grid",
+  lapply(info_list, function(info) {
+    div(
+      class = "g-col-12 g-col-md-6 g-col-lg-4",
+      teacher_card(
+        name = info[[1]],
+        photo.dir = info[[3]],
+        desc.dir  = read_file(info[[2]]),
+        linkedin  = read_file(info[[4]])
+      )
     )
-  ),
-  tags$h5(
-    "Adrián Cidre",
-    class = "teacher__name"
-  ),
-  tags$div(
-    "Ingeniero Forestal por la Universidad de Santiago de Compostela (2022) y Máster en Geomática, Teledetección y Modelos espaciales aplicados a la Gestión Forestal por la Universidad de Córdoba (2024). Actualmente trabaja en la empresa Gesplan en un proyecto de selvicultura adaptativa del pino canario en Tenerife, mientras realiza sus estudios doctorales. Su especialidad es la ciencia de datos geoespaciales, y tiene varios cursos donde enseña a programar con R.",
-    class = "teacher__desc"
-  ),
-  tags$button(
-    class = "btn teacher__btn",
-    tags$a(
-      class = "teacher__btn-text",
-      tags$i(class = "fa-brands fa-linkedin", style = "margin-right: 8px;"),
-      "Linkedin",
-      href   = "https://www.linkedin.com/in/adrian-cidre/",
-      style  = "text-decoration: none;",
-      target = "_blank"
-    )
-  )
+  })
 )
-```
-:::
 
-::: {.g-col-12 .g-col-md-6}
-```{r}
-div(
-  class = "teacher",
-  div(
-    class = "teacher__img-container",
-    tags$img(
-      src   = cab,
-      alt   = "Imagen",
-      class = "teacher__img"
-    )
-  ),
-  tags$h5(
-    "Antonio Cabrera",
-    class = "teacher__name"
-  ),
-  tags$div(
-    "Ingeniero de Montes por la Universidad de Córdoba (2005); Doctor en Ciencias de las producciones Vegetales por la Scuola Superiore Sant'Anna y la Universidad de Pisa (2009); Máster en Geomática, Teledetección y Modelos espaciales aplicados a la gestión forestal (2020) y Diplomado en Docencia universitaria para el aprendizaje profundo y la innovación educativa de la Universidad Católica del Maule en Talca, Chile (2024). Sus líneas principales de investigación están relacionadas con la integración de sensores remotos, empleando tecnología de última generación, como el LiDAR, imágenes multiespectrales y térmicas, para el estudio de los recursos naturales.",
-    class = "teacher__desc"
-  ),
-  tags$button(
-    class = "btn teacher__btn",
-    tags$a(
-      class = "teacher__btn-text",
-      tags$i(class = "fa-brands fa-linkedin", style = "margin-right: 8px;"),
-      "Linkedin",
-      href   = "https://www.linkedin.com/in/antonio-mar%C3%ADa-cabrera-ariza-778b693b/",
-      style  = "text-decoration: none;",
-      target = "_blank"
-    )
-  )
-)
 ```
-:::
-
-::: {.g-col-12 .g-col-md-6}
-```{r}
-div(
-  class = "teacher",
-  div(
-    class = "teacher__img-container",
-    tags$img(
-      src   = varo,
-      alt   = "Imagen",
-      class = "teacher__img"
-    )
-  ),
-  tags$h5(
-    "Mª Ángeles Varo",
-    class = "teacher__name"
-  ),
-  tags$div(
-    "Ingeniera de Montes por la Universidad de Córdoba (2005) y Máster en Geomática, Teledetección y Modelos espaciales aplicados a la gestión forestal (2014) con una formación multidisciplinar y actualmente cursando doctorado. Desarrolla su actividad investigadora en la integración de sensores remotos, empleando tecnología de última generación, como el LiDAR, imágenes de muy alta resolución espacial, como RapidEye y WolrdView2, para el estudio de procesos de decaimiento en masas artificiales de pinar, así como su detección temprana.",
-    class = "teacher__desc"
-  ),
-  tags$button(
-    class = "btn teacher__btn",
-    tags$a(
-      class = "teacher__btn-text",
-      tags$i(class = "fa-brands fa-linkedin", style = "margin-right: 8px;"),
-      "Linkedin",
-      href   = "https://www.linkedin.com/in/m%C2%AA-%C3%A1ngeles-varo-72568729/",
-      style  = "text-decoration: none;",
-      target = "_blank"
-    )
-  )
-)
-```
-:::
-:::::
-
 
