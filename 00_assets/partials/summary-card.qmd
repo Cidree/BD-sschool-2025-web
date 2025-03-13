@@ -1,19 +1,17 @@
 ::::::::::: mapcard
 :::::::::: grid
-::::::::: {.g-col-12 .g-col-md-6}
+::::::::: {.g-col-12 .g-col-lg-6}
 ::: mapcard__title
 Te interesa?
 :::
 
 :::::: grid
-::: {.g-col-6 .mapcard__opts}
+::: {.g-col-4 .mapcard__opts}
 Fechas:
 
 Organiza:
 
 Localización:
-
-Institución:
 
 Idioma:
 
@@ -22,14 +20,12 @@ Créditos:
 Precio:
 :::
 
-::: {.g-col-6 .mapcard__answ}
+::: {.g-col-8 .mapcard__answ}
 23 junio - 25 junio 2025
 
 Universidad de Córdoba
 
 Córdoba, España
-
-Universidad de Córdoba
 
 Español
 
@@ -45,7 +41,7 @@ Regístrate {{< fa arrow-up-right-from-square >}}
 
 :::::::::
 
-::: {.g-col-12 .g-col-md-6 .mapcard__map}
+::: {.g-col-12 .g-col-lg-6 .mapcard__map}
 ```{r}
 maplibre() |> 
   fly_to(
