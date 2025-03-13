@@ -26,6 +26,7 @@ fig-align: 'center'
 fig-pos: 'bt!'
 fig-cap-location: 'bottom'
 tbl-cap-location: 'top'
+lightbox: true
 
 # Cross-references --------------------
 crossref:

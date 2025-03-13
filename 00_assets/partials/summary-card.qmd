@@ -1,0 +1,62 @@
+::::::::::: mapcard
+:::::::::: grid
+::::::::: {.g-col-12 .g-col-md-6}
+::: mapcard__title
+Te interesa?
+:::
+
+:::::: grid
+::: {.g-col-6 .mapcard__opts}
+Fechas:
+
+Organiza:
+
+Localización:
+
+Institución:
+
+Idioma:
+
+Créditos:
+
+Precio:
+:::
+
+::: {.g-col-6 .mapcard__answ}
+23 junio - 25 junio 2025
+
+Universidad de Córdoba
+
+Córdoba, España
+
+Universidad de Córdoba
+
+Español
+
+2 ECTS
+
+50€
+:::
+
+::: {.g-col-12 .mapcard__btn .btn}
+Regístrate {{< fa arrow-up-right-from-square >}}
+:::
+::::::
+
+:::::::::
+
+::: {.g-col-12 .g-col-md-6 .mapcard__map}
+```{r}
+maplibre() |> 
+  fly_to(
+    center = c(-4.724533, 37.915041),
+    zoom = 3
+  ) |>
+  add_markers(
+    data  = rabanales_sf
+  ) |>
+  add_navigation_control()
+```
+:::
+::::::::::
+:::::::::::

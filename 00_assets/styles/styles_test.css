@@ -1,5 +1,8 @@
 
-/* Justificar texto */
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Passion+One:wght@400;700;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Base */
 p,
 .abstract {
   text-align: justify;
@@ -31,6 +34,11 @@ h2 {
   border-bottom: 1px solid #bfbfbf;
 }
 
+img {
+  display: block;
+  margin: auto;
+}
+
 .btn {
   background-color: #8C6239;
   color: #fff;
@@ -44,7 +52,8 @@ h2 {
   transition: all .2s;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:active {
     background-color: #149e0d;
 }
 
@@ -108,7 +117,8 @@ h2 {
   font-size: .8rem;
 }
 
-.teacher__btn-text {
+.teacher__btn-text,
+.mapcard__btn {
   color: #fff;
   font-weight: 500;
   transition: font-size 0.3s ease-in-out;
@@ -132,6 +142,7 @@ h2 {
   height: 3.5rem;
 }
 
+/* CALLOUTS ------------*/
 
 div.callout-important.callout-style-default>.callout-header {
     background-color: #FFCF99;
@@ -142,6 +153,64 @@ div.callout-important.callout {
     background-color: #ffefe9;
 }
 
+div.callout-tip.callout-style-default>.callout-header {
+    background-color: #b5f4ac;
+}
+
+div.callout-tip.callout {
+    background-color: #f9ffe9;
+}
+
 .maplibregl-map  {
   margin-bottom: 2rem;
+}
+
+
+/* MAP CARD --------------------- */
+.mapcard {
+  background-color: #FFD6AF;
+  padding: 3rem;
+  margin: 3rem 0;
+}
+
+.mapcard__title {
+  margin-top: 5rem;
+  color: #002500;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-family: Merriweather;
+}
+
+.mapcard__opts {
+  color: #002500;
+  font-weight: 700;
+  line-height: 1;
+  font-family: Merriweather;
+}
+
+.mapcard__answ {
+  color: #002500;
+  line-height: 1;
+  font-family: Merriweather;
+}
+
+
+.mapcard__btn {
+  text-align: center;
+}
+
+.mapcard__btn p {
+  text-align: center;
+  padding: .5rem;
+  vertical-align: center;
+}
+
+.mapcard__btn:hover,
+.mapbard__btn:focus {
+  font-size: 1.52rem;
+  font-weight: 700;
+}
+
+.mapcard__map canvas {
+  border: 3px solid #002500;
 }

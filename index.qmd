@@ -16,6 +16,7 @@ editor_options:
 #| label: load_packages
 #| include: false
 
+library(calendR)
 library(mapgl)
 library(readxl)
 library(shiny)
@@ -24,6 +25,19 @@ library(tidyverse)
 
 source("R/utils.R")
 ```
+
+```{r}
+#| label: load_data
+
+## location
+rabanales_sf <- st_point(c(-4.724533, 37.915041)) |> 
+  st_sfc(crs = 4326) |> 
+  st_as_sf() |> 
+  mutate(Edificio = "Edificio Da Vinci")
+
+```
+
+{{< include 00_assets/partials/summary-card.qmd >}}
 
 ## Bosque Digital
 
@@ -49,19 +63,64 @@ Razones para apuntarse
 
 Audiencia ...
 
-## Programa
-
-Tablas ...??
-
 ## Fechas clave
 
--   **31 de mayo**: fecha límite de inscripcion
+-   <b>30 de mayo</b>: fecha límite de inscripcion
 
 -   **23 de junio**: Día 1 Summer School - Herramientas Geoinformáticas
 
 -   **24 de junio**: Día 2 Summer School - Teledetección e Inteligencia Artificial
 
 -   **25 de junio**: Día 3 Summer School - Teledetección próxima a la Tierra
+
+:::{.callout-tip collapse="true"}
+## Ver calendario
+
+```{r}
+#| label: calendar
+#| fig-height: 7
+img <- "https://i.pinimg.com/originals/10/1e/f6/101ef6a9e146b23de28fa2cd568ad17b.jpg"
+
+## weekends
+## - Generate all 2025 days
+dates_2025 <- seq.Date(
+  from = as.Date("2025-01-01"), 
+  to   = as.Date("2025-12-31"), 
+  by   = "day"
+)
+## - get integers
+year_days <- as.integer(format(dates_2025, "%j"))
+## - get only weekends
+weekends <- year_days[weekdays(dates_2025) %in% c("sábado", "domingo")]
+
+## special days
+events <- rep(NA, 365)
+events[weekends] <- "Fin de semana"
+events[c(174:176)] <- "Summer School"
+events[c(150)] <- "Fecha límite"
+
+
+
+calendR(
+  start        = "M",    
+  mbg.col      = 4,       
+  months.col   = "white",      
+  special.days = events,  
+  special.col  = c("#DA9F93", "#CDCDCD", "#F28F3B"), 
+  lty          = 0,                   
+  weeknames    = c("Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"),
+  title.size   = 40,   
+  orientation  = "p",
+  bg.img       = img
+) 
+```
+:::
+
+
+
+## Programa
+
+Tablas ...??
 
 ## Ubicación y logística
 
@@ -73,12 +132,6 @@ El Summer School Bosque Digital se realizará en el Campus Rabanales de la ciuda
 
 ```{r}
 #| label: localizacion
-
-## coords
-rabanales_sf <- st_point(c(-4.724533, 37.915041)) |> 
-  st_sfc(crs = 4326) |> 
-  st_as_sf() |> 
-  mutate(Edificio = "Edificio Da Vinci")
 
 # ## mapa
 # mapboxgl(
@@ -107,13 +160,18 @@ maplibre(
   add_fullscreen_control()
 ```
 
+
+
+::: {.callout-important collapse="true"}
+
+## Importante - Información Renfe
+
 El Campus se encuentra a unos 20 minutos en coche de la ciudad de Córdoba, pero se puede ir en un tren de proximidad que tarda 6 minutos desde la estación de Renfe. Puedes consultar los horarios aquí:
 
 ```{=html}
 <iframe src="00_assets/data/horarios-tren.pdf" width="100%" height="600px"></iframe>
 ```
 
-::: callout-important
 La primera hoja indica las horas de salida de Córdoba (Córdoba Central), y la hora de llegada a Campus Univ. Rabanales.
 
 La segunda hoja indica las horas de salida de Campus Univ. Rabanales, y la hora de llegada a Córdoba (Córdoba Central).
@@ -198,3 +256,4 @@ div(
 ## Preguntas frecuentes (FAQ)
 
 ## Contacto
+
