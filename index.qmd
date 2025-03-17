@@ -17,6 +17,7 @@ editor_options:
 #| include: false
 
 library(calendR)
+library(gt)
 library(mapgl)
 library(readxl)
 library(shiny)
@@ -73,7 +74,7 @@ Audiencia ...
 
 -   **25 de junio**: Día 3 Summer School - Teledetección próxima a la Tierra
 
-:::{.callout-tip collapse="true"}
+::: {.callout-tip collapse="true"}
 ## Ver calendario
 
 ```{r}
@@ -116,11 +117,25 @@ calendR(
 ```
 :::
 
-
-
 ## Programa
 
-Tablas ...??
+-   Cambiar colores de las tablas
+
+-   Repasar horarios / coordinadores...
+
+::: panel-tabset
+## 23 de junio
+
+![](00_assets/figures/agenda-d1.png){fig-align="center"}
+
+## 24 de junio
+
+![](00_assets/figures/agenda-d2.png){fig-align="center"}
+
+## 25 de junio
+
+![](00_assets/figures/agenda-d3.png){fig-align="center"}
+:::
 
 ## Ubicación y logística
 
@@ -160,10 +175,7 @@ maplibre(
   add_fullscreen_control()
 ```
 
-
-
 ::: {.callout-important collapse="true"}
-
 ## Importante - Información Renfe
 
 El Campus se encuentra a unos 20 minutos en coche de la ciudad de Córdoba, pero se puede ir en un tren de proximidad que tarda 6 minutos desde la estación de Renfe. Puedes consultar los horarios aquí:
@@ -256,4 +268,3 @@ div(
 ## Preguntas frecuentes (FAQ)
 
 ## Contacto
-
