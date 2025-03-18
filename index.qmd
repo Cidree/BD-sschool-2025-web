@@ -5,7 +5,7 @@ author: "Universidad de Córdoba"
 author-title: "Organiza"
 date: "23-junio-2025"
 published-title: "Fecha de inicio"
-abstract: "La Universidad de Córdoba, a través del programa Bosque Digital, organiza un *Summer School* centrado en la aplicación de la geoinformática en ecosistemas forestales. Este programa ofrece formación especializada en tecnologías de análisis geoespacial, teledetección, modelado y sensores activos aplicados a la gestión y conservación de bosques. Dirigido a estudiantes, investigadores y profesionales del sector, el curso combina sesiones teóricas y prácticas con expertos en la materia"
+abstract: "La Universidad de Córdoba, a través del programa Bosque Digital, organiza un Summer School centrado en la aplicación de la geoinformática en ecosistemas forestales. Este programa ofrece formación especializada en tecnologías de análisis geoespacial, teledetección, modelado y sensores activos aplicados a la gestión y conservación de bosques. Con un enfoque eminentemente práctico, el curso prioriza el aprendizaje aplicado mediante el uso de software especializado, análisis de datos reales y ejercicios. Dirigido a estudiantes, investigadores y profesionales del sector, combina sesiones teóricas con talleres interactivos impartidos por expertos en la materia."
 title-block-banner-color: "#F8E1C4"
 title-block-banner: true
 editor_options: 
@@ -18,13 +18,18 @@ editor_options:
 
 library(calendR)
 library(gt)
+library(lidR)
 library(mapgl)
 library(readxl)
+library(rgl)
 library(shiny)
 library(sf)
+library(terra)
 library(tidyverse)
 
 source("R/utils.R")
+
+knitr::knit_hooks$set(webgl = hook_webgl)
 ```
 
 ```{r}
@@ -44,21 +49,58 @@ rabanales_sf <- st_point(c(-4.724533, 37.915041)) |>
 
 ::::: grid
 ::: {.g-col-12 .g-col-md-6}
-![](00_assets/figures/logo-bosque-digital.jpg){fig-align="center" width="545"}
+![](00_assets/figures/logo-bosque-digital.png){fig-align="center"}
 :::
 
 ::: {.g-col-12 .g-col-md-6}
-Bosque Digital es un sistema de microcredenciales MOOC orientado a introducir a estudiantes y profesionales en el uso de herramientas geo-informáticas aplicadas al territorio forestal en entornos SIG. El Mooc-Bosque Digital se centra en un área de conocimiento muy especializada, la geoinformática, con el propósito de ofrecer competencias específicas vinculada al uso de diferentes herramientas tecnológicas y su aplicación práctica al territorio forestal, a partir de las últimas tendencias en este sector. El curso tiene un componente claramente innovador y, está orientado específicamente a los recursos naturales y sistemas forestales.
+Bosque Digital es un sistema de microcredenciales MOOC orientado a introducir a estudiantes y profesionales en el uso de herramientas geo-informáticas aplicadas al territorio forestal en entornos SIG. El Mooc-Bosque Digital se centra en un área de conocimiento muy especializada, la geoinformática, con el propósito de ofrecer competencias específicas vinculada al uso de diferentes herramientas tecnológicas y su aplicación práctica al territorio forestal, a partir de las últimas tendencias en este sector. El curso tiene un componente claramente innovador y, está orientado específicamente a los recursos naturales y sistemas forestales, y se divide en tres secciones:
+
+-   Bosque Digital Introducción, donde se ofrece el acceso a competencias básicas en el área de geoinformática (SIG, Teledetección, bases de datos y modelización)
+
+-   Bosque Digital Avanzado, que incluye formación en técnicas avanzadas de geoinformática, incluyendo sensorización de sistemas agroforestales, LiDAR terrestre, Google Earth Engine, y modelización basada en R.
+
+-   Bosque Digital Acción, con un fuerte componente práctico, y que abarca competencias basadas en herramientas de campo aplicadas a la gestión del medio forestal, como OruxMap, QGIS forestal, drones, y emergencias.
 :::
 :::::
 
 ## Summer School 2025
 
-Objetivos y enfoque del programa
+El *Summer School* de Bosque Digital tiene como objetivo proporcionar una formación intensiva en herramientas geoinformáticas clave para el análisis y gestión de ecosistemas forestales. A lo largo de tres días, los participantes explorarán metodologías innovadoras a través de sesiones prácticas centradas en herramientas geoinformáticas, aplicaciones de la teledetección y la inteligencia artificial, y teledetección próxima a la Tierra con sensores activos.
 
-Beneficios para los estudiantes
+El programa está diseñado para maximizar el aprendizaje práctico mediante *workshops* de sistemas de información geográfica con QGIS, programación en R y Python, *cloud computing* de datos de teledetección con *Google Earth Engine*, ejercicios aplicados a inventarios forestales, análisis de datos LiDAR y más. Además, contará con "retos relámpago": microcharlas de 10-15 minutos donde se presentarán casos de estudio, herramientas innovadoras y estado del arte en el sector forestal. Los estudiantes tendrán los siguientes beneficios:
 
-Razones para apuntarse
+-   Desarrollo de habilidades técnicas en herramientas geoespaciales de alta demanda en el sector forestal.
+
+-   Acceso a formación con expertos en geoinformática y ciencias forestales.
+
+-   Aplicación de conocimientos en casos reales mediante ejercicios prácticos (*workshops*).
+
+-   Posibilidad de establecer contactos y relaciones con investigadores y profesionales del ámbito forestal.
+
+-   Certificación de participación en las jornadas.
+
+Este *Summer School* es una oportunidad única para adquirir competencias prácticas en tecnologías clave para la gestión forestal. Si te interesa la aplicación de herramientas geoinformáticas, la teledetección y la inteligencia artificial en la conservación y manejo de ecosistemas, este programa te brindará conocimientos aplicados y herramientas esenciales para potenciar tu carrera en el sector.
+
+```{r}
+#| label: read_lidar
+## load lidar
+lid_las <- readLAS("00_assets/data/lidar-tenerife.laz")
+
+## random point
+plot_sf <- withr::with_seed(137, {
+  st_sample(st_bbox(lid_las), 1) |> st_as_sf()
+})
+```
+
+```{r}
+#| label: plot_lidar
+#| webgl: true
+## extract point cloud
+plot_las <- clip_roi(lid_las, st_buffer(plot_sf, 15))
+
+## plot
+plot(plot_las)
+```
 
 ## Audiencia Objetivo
 

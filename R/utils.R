@@ -111,7 +111,7 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
     tab_style(
       style = list(
         cell_fill(color = "#002500"),
-        cell_text(color = "#e1e3e1")
+        cell_text(color = "#e1e3e1", weight = "bold")
       ),
       locations = cells_title(groups = c("title", "subtitle"))
     ) |>
@@ -168,8 +168,18 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
       locations = cells_title()
     ) |>
     cols_width(
-      Horario ~ px(200)
+      Horario ~ px(110)
     ) |>
+    ## horario column title
+    tab_stubhead("Horario") |>
+    tab_style(
+      style = list(
+        cell_fill(color = "#8C6239"),
+        cell_text(color = "#FFCF99", weight = "bold")
+      ),
+      locations = cells_stubhead()
+    ) |>
+    ## missing values
     fmt_missing(missing_text = "")
 }
 

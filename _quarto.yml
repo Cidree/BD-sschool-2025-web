@@ -5,9 +5,10 @@ lang: es
 
 format:
   html:
-    theme: sandstone
+    theme:
+      - sandstone
+      - 00_assets/styles/main.scss
     highlight: tango
-    css: 00_assets/styles/styles_test.css
     grid:
       sidebar-width: 100px
       body-width: 950px
