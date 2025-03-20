@@ -190,7 +190,9 @@ calendR(
 
 ## Ubicación y logística
 
-El Summer School Bosque Digital se realizará en el Campus Rabanales de la ciudad de Córdoba, más concretamente en el edificio Da Vinci (ver mapa).
+![](00_assets/figures/campus_rabanales.jpg){fig-alt="Campus Rabanales" fig-align="center"}
+
+El *Summer School* Bosque Digital se realizará en el Campus Rabanales de la ciudad de Córdoba (España), más concretamente en el edificio Da Vinci (ver mapa).
 
 -   Dirección: N-IV, km 396, 14014 Córdoba
 
@@ -353,21 +355,21 @@ El Summer School ofrece dos modalidades:
 ::: {.callout-note icon="false" collapse="true"}
 ## {{< fa circle-question >}} **Qué ventajas tengo si asisto presencialmente en lugar de online?**
 
-* Tendrás la oportunidad de participar de forma más interactiva en los *workshops* y las sesiones prácticas.
+-   Tendrás la oportunidad de participar de forma más interactiva en los *workshops* y las sesiones prácticas.
 
-* Conectar y hacer networking con otros participantes, investigadores y profesionales del sector.
+-   Conectar y hacer networking con otros participantes, investigadores y profesionales del sector.
 
-* Acceder a actividades exclusivas, como la toma de datos en campo y el evento “Cervezas con ciencia.
+-   Acceder a actividades exclusivas, como la toma de datos en campo y el evento “Cervezas con ciencia.
 
-* Resolución de dudas y preguntas especializada.
+-   Resolución de dudas y preguntas especializada.
 :::
 
 ::: {.callout-note icon="false" collapse="true"}
 ## {{< fa circle-question >}} **Qué ventajas tengo si asisto online en lugar de presencialmente?**
 
-* Acceder al contenido desde cualquier lugar, sin necesidad de desplazarte.
+-   Acceder al contenido desde cualquier lugar, sin necesidad de desplazarte.
 
-* Ahorrar en costos de viaje y alojamiento sin perder el acceso a la formación especializada.
+-   Ahorrar en costos de viaje y alojamiento sin perder el acceso a la formación especializada.
 :::
 
 ::: {.callout-note icon="false" collapse="true"}
@@ -379,6 +381,3 @@ Sí, solo quienes participen en el *Summer Schoo*l podrán obtener el certificad
 ## Contacto
 
 Si tienes alguna duda, puedes ponerte en contacto con nosotros a través del correo {{< fa envelope >}} [info\@mastergeoforest.es](mailto:info@mastergeoforest.es)
-
-
-
