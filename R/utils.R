@@ -75,6 +75,10 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
     mutate(id = cur_group_id()) |>
     ungroup()
 
+  c1 <- "#cae1ca"
+  c2 <- "#004d00"
+  c3 <- "#f9ffe9"
+
 
   dat |>
     select(-id) |>
@@ -107,27 +111,19 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
       row_group.border.bottom.width = px(1),
       row_group.border.bottom.color = "gray"
     ) |>
-    ## title style
-    tab_style(
-      style = list(
-        cell_fill(color = "#002500"),
-        cell_text(color = "#e1e3e1", weight = "bold")
-      ),
-      locations = cells_title(groups = c("title", "subtitle"))
-    ) |>
     ## horario column (even rows)
     tab_style(
       style = list(
-        cell_text(color = "#FFCF99", weight = "bold"),  # Peach title text
-        cell_fill(color = "#8C6239")  # Brown background
+        cell_text(color = c1, weight = "bold"),  # Peach title text
+        cell_fill(color = c2)  # Brown background
       ),
       locations = cells_row_groups()
     ) |>
     ## body rows (even rows)
     tab_style(
       style = list(
-        cell_fill(color = "#f9ffe9"),  # Peach title text
-        cell_text(color = "#002500")  # Brown background
+        cell_fill(color = c3),  # Peach title text
+        cell_text(color = c2)  # Brown background
       ),
       locations = cells_body(
         rows = which(dat$id %% 2 == 0)
@@ -136,8 +132,8 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
     ## body rows (uneven rows)
     tab_style(
       style = list(
-        cell_fill(color = "#e1e3e1"),  # Peach title text
-        cell_text(color = "#002500")  # Brown background
+        cell_fill(color = c1),  # Peach title text
+        cell_text(color = c2)  # Brown background
       ),
       locations = cells_body(
         rows = which(dat$id %% 2 != 0)
@@ -145,25 +141,25 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
     ) |>
     opt_table_font("Merriweather") |>
     ## dencansos
-    tab_style(
-      style     = list(
-        cell_fill(color = "#002500"),
-        cell_text(color = "#e1e3e1")
-      ),
-      locations = cells_body(rows = which(dat$Tipo == "Descanso"))
-    ) |>
+    # tab_style(
+    #   style     = list(
+    #     cell_fill(color = c2),
+    #     cell_text(color = c1)
+    #   ),
+    #   locations = cells_body(rows = which(dat$Tipo == "Descanso"))
+    # ) |>
     ## column titles
     tab_style(
       style     = list(
-        cell_text(color = "#FFCF99", weight = "bold"),  # Peach title text
-        cell_fill(color = "#8C6239")  # Brown background
+        cell_text(color = c1, weight = "bold"),  # Peach title text
+        cell_fill(color = c2)  # Brown background
       ),
       locations = cells_column_labels()
     ) |>
     tab_style(
       style     = list(
-        cell_fill(color = "#002500"),
-        cell_text(color = "#e1e3e1")
+        cell_fill(color = c2),
+        cell_text(color = c1)
       ),
       locations = cells_title()
     ) |>
@@ -174,8 +170,8 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
     tab_stubhead("Horario") |>
     tab_style(
       style = list(
-        cell_fill(color = "#8C6239"),
-        cell_text(color = "#FFCF99", weight = "bold")
+        cell_fill(color = c2),
+        cell_text(color = c1, weight = "bold")
       ),
       locations = cells_stubhead()
     ) |>
@@ -183,11 +179,11 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
     fmt_missing(missing_text = "")
 }
 
-agenda_table(3) |>
+agenda_table(1) |>
   gtsave("00_assets/figures/agenda-d1.png")
 
-agenda_table(4, "*Dia 2: Teledetección e Inteligencia Artificial*") |>
+agenda_table(2, "*Dia 2: Teledetección e Inteligencia Artificial*") |>
   gtsave("00_assets/figures/agenda-d2.png")
 
-agenda_table(5, "*Dia 3: Teledetección próxima a la Tierra*") |>
+agenda_table(3, "*Dia 3: Teledetección próxima a la Tierra*") |>
   gtsave("00_assets/figures/agenda-d3.png")

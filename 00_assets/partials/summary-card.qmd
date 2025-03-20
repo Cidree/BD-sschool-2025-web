@@ -17,7 +17,9 @@ Idioma:
 
 Créditos:
 
-Precio:
+Precio curso:
+
+Certificado:
 :::
 
 ::: {.g-col-8 .mapcard__answ}
@@ -29,13 +31,15 @@ Córdoba, España
 
 Español
 
-2 ECTS
+5 ECTS
 
-50€
+Gratis
+
+65,75€
 :::
 
 ::: {.g-col-12 .mapcard__btn .btn}
-Regístrate {{< fa arrow-up-right-from-square >}}
+Preinscripción {{< fa arrow-up-right-from-square >}}
 :::
 ::::::
 

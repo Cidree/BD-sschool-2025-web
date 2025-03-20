@@ -1,6 +1,6 @@
 ---
-title: "Bosque Digital - Summer School 2025"
-subtitle: "Geoinformática en los ecosistemas forestales"
+title: "1º *Summer School* - Bosque Digital"
+subtitle: "De las palabras a los datos en ciencias forestales"
 author: "Universidad de Córdoba"
 author-title: "Organiza"
 date: "23-junio-2025"
@@ -48,7 +48,7 @@ rabanales_sf <- st_point(c(-4.724533, 37.915041)) |>
 ## Bosque Digital
 
 ::::: grid
-::: {.g-col-12 .g-col-md-6}
+::: {.g-col-12 .g-col-md-6 .align-self-center}
 ![](00_assets/figures/logo-bosque-digital.png){fig-align="center"}
 :::
 
@@ -81,6 +81,18 @@ El programa está diseñado para maximizar el aprendizaje práctico mediante *wo
 
 Este *Summer School* es una oportunidad única para adquirir competencias prácticas en tecnologías clave para la gestión forestal. Si te interesa la aplicación de herramientas geoinformáticas, la teledetección y la inteligencia artificial en la conservación y manejo de ecosistemas, este programa te brindará conocimientos aplicados y herramientas esenciales para potenciar tu carrera en el sector.
 
+## Destacados del evento
+
+-   **Análisis geoespacial con R, Python y Google Earth Engine** – Talleres prácticos para el manejo, procesamiento y modelado de datos espaciales con herramientas clave en programación y teledetección.
+
+-   **Machine Learning e Inteligencia Artificial en ciencias forestales** – Exploración de cómo estas tecnologías están revolucionando la gestión forestal, desde la clasificación de usos del suelo hasta modelos de distribución de especies.
+
+-   **Toma de datos en campo con herramientas móviles** – Práctica con *QFIELD, OruxMaps* e *iPhone* para optimizar la captura y gestión de datos geoespaciales en inventarios forestales.
+
+-   **Procesado y análisis de datos LiDAR** – Talleres especializados en el preprocesado, modelado y extracción de métricas con *lidR*, incluyendo aplicaciones en inventario forestal y análisis de estructura del bosque.
+
+-   **Cervezas con ciencia** – Un espacio para compartir experiencias, proyectos y debatir sobre geociencias forestales en un ambiente distendido.
+
 ```{r}
 #| label: read_lidar
 ## load lidar
@@ -93,8 +105,9 @@ plot_sf <- withr::with_seed(137, {
 ```
 
 ```{r}
-#| label: plot_lidar
+#| label: fig-lidar
 #| webgl: true
+#| fig-cap: "Nube de puntos LiDAR en una parcela de pino canario en Tenerife (imagen interactiva)"
 ## extract point cloud
 plot_las <- clip_roi(lid_las, st_buffer(plot_sf, 15))
 
@@ -104,7 +117,7 @@ plot(plot_las)
 
 ## Audiencia Objetivo
 
-Audiencia ...
+Este *Summer School* está dirigido a estudiantes, investigadores, profesionales del sector forestal y especialistas en geoinformática que deseen ampliar sus conocimientos en el uso de herramientas geoespaciales aplicadas a la investigación y gestión forestal.
 
 ## Fechas clave
 
@@ -160,10 +173,6 @@ calendR(
 :::
 
 ## Programa
-
--   Cambiar colores de las tablas
-
--   Repasar horarios / coordinadores...
 
 ::: panel-tabset
 ## 23 de junio
@@ -268,6 +277,22 @@ div(
 
 ## Inscripción y costos
 
+El curso ofrece una formación intensiva con una duración equivalente a **5 ETCS**, combinando actividades presenciales y no presenciales. Las plazas disponibles son:
+
+-   **Presencial**: 30 plazas
+
+-   **Online**: 30 plazas
+
+La inscripción al curso es grauita a través de la plataforma MOOC-UCO Digital. Sin embargo, para obtener el certificado oficial de participación y reconocimiento de créditos, se recomienda encarecidamente el paso de la tasa correspondiente al final del curso.
+
+Dado que el número de plazas es limitado, pedimos a los interesados que solo se inscriban si realmente podrán asistir. En caso de no poder participar, rogamos que lo comuniquen con la mayor antelación posible para que otra persona pueda ocupar su lugar.
+
+::: callout-important
+## Atención
+
+Solo aquellos participantes que **asistan** al *Summer School* podrán obtener el certificado de participación, ya sea en la modalidad presencial u online.
+:::
+
 ## Organizadores y Patrocinadores
 
 ```{r}
@@ -309,4 +334,51 @@ div(
 
 ## Preguntas frecuentes (FAQ)
 
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa circle-question >}} **Es grauito el curso?**
+
+Sí, la inscripción es gratuita a través de MOOC-UCO Digital. Sin embargo, para obtener el certificado oficial de participación y reconocimiento de créditos, se recomienda encarecidamente el pago de la tasa correspondiente.
+:::
+
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa circle-question >}} **Cómo es la modalidad del curso?**
+
+El Summer School ofrece dos modalidades:
+
+**Presencial**: máximo de 30 plazas disponibles.
+
+**Online**: máximo de 30 plazas disponibles.
+:::
+
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa circle-question >}} **Qué ventajas tengo si asisto presencialmente en lugar de online?**
+
+* Tendrás la oportunidad de participar de forma más interactiva en los *workshops* y las sesiones prácticas.
+
+* Conectar y hacer networking con otros participantes, investigadores y profesionales del sector.
+
+* Acceder a actividades exclusivas, como la toma de datos en campo y el evento “Cervezas con ciencia.
+
+* Resolución de dudas y preguntas especializada.
+:::
+
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa circle-question >}} **Qué ventajas tengo si asisto online en lugar de presencialmente?**
+
+* Acceder al contenido desde cualquier lugar, sin necesidad de desplazarte.
+
+* Ahorrar en costos de viaje y alojamiento sin perder el acceso a la formación especializada.
+:::
+
+::: {.callout-note icon="false" collapse="true"}
+## {{< fa circle-question >}} **Es obligatorio asistir para obtener el certificado?**
+
+Sí, solo quienes participen en el *Summer Schoo*l podrán obtener el certificado de reconocimiento y asistencia.
+:::
+
 ## Contacto
+
+Si tienes alguna duda, puedes ponerte en contacto con nosotros a través del correo {{< fa envelope >}} [info\@mastergeoforest.es](mailto:info@mastergeoforest.es)
+
+
+
