@@ -283,7 +283,7 @@ El curso ofrece una formación intensiva con una duración equivalente a **5 ETC
 
 -   **Presencial**: 30 plazas
 
--   **Online**: 30 plazas
+-   **Online**: 50 plazas
 
 La inscripción al curso es grauita a través de la plataforma MOOC-UCO Digital. Sin embargo, para obtener el certificado oficial de participación y reconocimiento de créditos, se recomienda encarecidamente el paso de la tasa correspondiente al final del curso.
 
@@ -349,7 +349,7 @@ El Summer School ofrece dos modalidades:
 
 **Presencial**: máximo de 30 plazas disponibles.
 
-**Online**: máximo de 30 plazas disponibles.
+**Online**: máximo de 50 plazas disponibles.
 :::
 
 ::: {.callout-note icon="false" collapse="true"}

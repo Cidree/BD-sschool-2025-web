@@ -1,5 +1,9 @@
 project:
   title: "BD-sschool-2025-web"
+  type: website
+
+website:
+  title: "Summer School Bosque Digital"
 
 lang: es
 

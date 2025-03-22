@@ -1,16 +1,100 @@
 [
   {
-    "objectID": "BD-sschool-2025-web.html",
-    "href": "BD-sschool-2025-web.html",
-    "title": "Bosque Digital - Summer School 2025",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "1º Summer School - Bosque Digital",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
+    "text": "Te interesa?\n\n\n\nFechas:\nOrganiza:\nLocalización:\nIdioma:\nCréditos:\nPrecio curso:\nCertificado:\n\n\n23 junio - 25 junio 2025\nUniversidad de Córdoba\nCórdoba, España\nEspañol\n5 ECTS\nGratis\n65,75€\n\n\nPreinscripción"
   },
   {
-    "objectID": "BD-sschool-2025-web.html#quarto",
-    "href": "BD-sschool-2025-web.html#quarto",
-    "title": "Bosque Digital - Summer School 2025",
+    "objectID": "index.html#bosque-digital",
+    "href": "index.html#bosque-digital",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "1 Bosque Digital",
+    "text": "1 Bosque Digital\n\n\n\n\n\n\n\n\n\nBosque Digital es un sistema de microcredenciales MOOC orientado a introducir a estudiantes y profesionales en el uso de herramientas geo-informáticas aplicadas al territorio forestal en entornos SIG. El Mooc-Bosque Digital se centra en un área de conocimiento muy especializada, la geoinformática, con el propósito de ofrecer competencias específicas vinculada al uso de diferentes herramientas tecnológicas y su aplicación práctica al territorio forestal, a partir de las últimas tendencias en este sector. El curso tiene un componente claramente innovador y, está orientado específicamente a los recursos naturales y sistemas forestales, y se divide en tres secciones:\n\nBosque Digital Introducción, donde se ofrece el acceso a competencias básicas en el área de geoinformática (SIG, Teledetección, bases de datos y modelización)\nBosque Digital Avanzado, que incluye formación en técnicas avanzadas de geoinformática, incluyendo sensorización de sistemas agroforestales, LiDAR terrestre, Google Earth Engine, y modelización basada en R.\nBosque Digital Acción, con un fuerte componente práctico, y que abarca competencias basadas en herramientas de campo aplicadas a la gestión del medio forestal, como OruxMap, QGIS forestal, drones, y emergencias."
+  },
+  {
+    "objectID": "index.html#summer-school-2025",
+    "href": "index.html#summer-school-2025",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "2 Summer School 2025",
+    "text": "2 Summer School 2025\nEl Summer School de Bosque Digital tiene como objetivo proporcionar una formación intensiva en herramientas geoinformáticas clave para el análisis y gestión de ecosistemas forestales. A lo largo de tres días, los participantes explorarán metodologías innovadoras a través de sesiones prácticas centradas en herramientas geoinformáticas, aplicaciones de la teledetección y la inteligencia artificial, y teledetección próxima a la Tierra con sensores activos.\nEl programa está diseñado para maximizar el aprendizaje práctico mediante workshops de sistemas de información geográfica con QGIS, programación en R y Python, cloud computing de datos de teledetección con Google Earth Engine, ejercicios aplicados a inventarios forestales, análisis de datos LiDAR y más. Además, contará con “retos relámpago”: microcharlas de 10-15 minutos donde se presentarán casos de estudio, herramientas innovadoras y estado del arte en el sector forestal. Los estudiantes tendrán los siguientes beneficios:\n\nDesarrollo de habilidades técnicas en herramientas geoespaciales de alta demanda en el sector forestal.\nAcceso a formación con expertos en geoinformática y ciencias forestales.\nAplicación de conocimientos en casos reales mediante ejercicios prácticos (workshops).\nPosibilidad de establecer contactos y relaciones con investigadores y profesionales del ámbito forestal.\nCertificación de participación en las jornadas.\n\nEste Summer School es una oportunidad única para adquirir competencias prácticas en tecnologías clave para la gestión forestal. Si te interesa la aplicación de herramientas geoinformáticas, la teledetección y la inteligencia artificial en la conservación y manejo de ecosistemas, este programa te brindará conocimientos aplicados y herramientas esenciales para potenciar tu carrera en el sector."
+  },
+  {
+    "objectID": "index.html#destacados-del-evento",
+    "href": "index.html#destacados-del-evento",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "3 Destacados del evento",
+    "text": "3 Destacados del evento\n\nAnálisis geoespacial con R, Python y Google Earth Engine – Talleres prácticos para el manejo, procesamiento y modelado de datos espaciales con herramientas clave en programación y teledetección.\nMachine Learning e Inteligencia Artificial en ciencias forestales – Exploración de cómo estas tecnologías están revolucionando la gestión forestal, desde la clasificación de usos del suelo hasta modelos de distribución de especies.\nToma de datos en campo con herramientas móviles – Práctica con QFIELD, OruxMaps e iPhone para optimizar la captura y gestión de datos geoespaciales en inventarios forestales.\nProcesado y análisis de datos LiDAR – Talleres especializados en el preprocesado, modelado y extracción de métricas con lidR, incluyendo aplicaciones en inventario forestal y análisis de estructura del bosque.\nCervezas con ciencia – Un espacio para compartir experiencias, proyectos y debatir sobre geociencias forestales en un ambiente distendido."
+  },
+  {
+    "objectID": "index.html#audiencia-objetivo",
+    "href": "index.html#audiencia-objetivo",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "4 Audiencia Objetivo",
+    "text": "4 Audiencia Objetivo\nEste Summer School está dirigido a estudiantes, investigadores, profesionales del sector forestal y especialistas en geoinformática que deseen ampliar sus conocimientos en el uso de herramientas geoespaciales aplicadas a la investigación y gestión forestal."
+  },
+  {
+    "objectID": "index.html#fechas-clave",
+    "href": "index.html#fechas-clave",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "5 Fechas clave",
+    "text": "5 Fechas clave\n\n30 de mayo: fecha límite de inscripcion\n23 de junio: Día 1 Summer School - Herramientas Geoinformáticas\n24 de junio: Día 2 Summer School - Teledetección e Inteligencia Artificial\n25 de junio: Día 3 Summer School - Teledetección próxima a la Tierra\n\n\n\n\n\n\n\nVer calendario"
+  },
+  {
+    "objectID": "index.html#programa",
+    "href": "index.html#programa",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "6 Programa",
+    "text": "6 Programa\n\n23 de junio24 de junio25 de junio"
+  },
+  {
+    "objectID": "index.html#ubicación-y-logística",
+    "href": "index.html#ubicación-y-logística",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "7 Ubicación y logística",
+    "text": "7 Ubicación y logística\n\n\n\n\n\nEl Summer School Bosque Digital se realizará en el Campus Rabanales de la ciudad de Córdoba (España), más concretamente en el edificio Da Vinci (ver mapa).\n\nDirección: N-IV, km 396, 14014 Córdoba\nEdificio Da Vinci\n\n\n\n\n\n\n\n\n\n\n\n\n\nImportante - Información Renfe\n\n\n\n\n\nEl Campus se encuentra a unos 20 minutos en coche de la ciudad de Córdoba, pero se puede ir en un tren de proximidad que tarda 6 minutos desde la estación de Renfe. Puedes consultar los horarios aquí:\n\nLa primera hoja indica las horas de salida de Córdoba (Córdoba Central), y la hora de llegada a Campus Univ. Rabanales.\nLa segunda hoja indica las horas de salida de Campus Univ. Rabanales, y la hora de llegada a Córdoba (Córdoba Central).\nPuedes adquirir los tickets en la página web de renfe."
+  },
+  {
+    "objectID": "index.html#sec-teachers",
+    "href": "index.html#sec-teachers",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "8 Equipo docente",
+    "text": "8 Equipo docente\n\n\n\n\n\n\n\n\n\nAdrián Cidre\nEstudiante de doctorado en la Universidad de Córdoba (UCO), Ingeniero Forestal por la Universidad de Santiago de Compostela (2022) y Máster GEOFOREST por la UCO (2024). Su investigación se centra en la optimización de la selvicultura del pino canario en Tenerife, empleando tecnologías como la teledetección y el LiDAR. Su especialidad es la ciencia de datos geoespaciales, y tiene varios cursos donde enseña a programar con R.\n\n\n\nLinkedin\n\n\n\n\n\n\n\n\n\nAntonio Ariza\nIngeniero de Montes y Doctor en Biociencias y Ciencias Agroalimentarias, trabaja como investigador contratado en el Departamento de Ingeniería Forestal de la Universidad de Córdoba. Sus líneas de investigación principales se centran en los métodos de modelización ecológica, el análisis espacial y la teledetección.\n\n\n\nLinkedin\n\n\n\n\n\n\n\n\n\nAntonio Cabrera\nIngeniero de Montes por la Universidad de Córdoba (2005); Doctor en Ciencias de las producciones Vegetales por la Scuola Superiore Sant'Anna y la Universidad de Pisa (2009); Máster GEOFOREST (2020) y Diplomado en Docencia universitaria para el aprendizaje profundo y la innovación educativa de la Universidad Católica del Maule en Talca, Chile (2024). Sus líneas principales de investigación están relacionadas con la integración de sensores remotos, empleando tecnología de última generación, como el LiDAR, imágenes multiespectrales y térmicas, para el estudio de los recursos naturales.\n\n\n\nLinkedin\n\n\n\n\n\n\n\n\n\nCarlos Martín Cortés\nEstudiante de Doctorado en la Universidad de Lleida, con co-tutela internacional en la University of Eastern Finland. Ingeniero Forestal por la Universidad de Valladolid y Máster GEOFOREST por la Universidad de Córdoba (UCO).\n\nActualmente, es investigador predoctoral en el Centro de Ciencia y Tecnología Forestal de Cataluña (CTFC), donde forma parte del proyecto europeo Sintetic. Su investigación se centra en en la integración de técnicas avanzadas de teledetección cercana en procesadoras forestales. Actualmente, colabora con el 'Natural Resources Institute Finland' y la UCO como docente de Bosque Digital.\n\n\n\nLinkedin\n\n\n\n\n\n\n\n\n\nFrancisco J Ruiz-Gómez\nIngeniero de Montes y Doctor en Biociencias y Ciencias Agroalimentarias, trabaja como Profesor Ayudante en el Departamento de Ingeniería Forestal de la Universidad de Córdoba, impartiendo clases en último curso del Grado de Ingeniería Forestal y en el Master Geoforest. Sus líneas de investigación principales se centran en la sostenibilidad de ecosistemas mediterráneos, incluyendo ecofisiología de especies forestales, patología y manejo forestal. \n\n\n\nLinkedin\n\n\n\n\n\n\n\n\n\nMª Ángeles Varo\nIngeniera de Montes por la Universidad de Córdoba (2005) y Máster en Geomática, Teledetección y Modelos espaciales aplicados a la gestión forestal (2014) con una formación multidisciplinar y actualmente cursando doctorado. Desarrolla su actividad investigadora en la integración de sensores remotos, empleando tecnología de última generación, como el LiDAR, imágenes de muy alta resolución espacial, como RapidEye y WolrdView2, para el estudio de procesos de decaimiento en masas artificiales de pinar, así como su detección temprana.\n\n\n\nLinkedin"
+  },
+  {
+    "objectID": "index.html#inscripción-y-costos",
+    "href": "index.html#inscripción-y-costos",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "9 Inscripción y costos",
+    "text": "9 Inscripción y costos\nEl curso ofrece una formación intensiva con una duración equivalente a 5 ETCS, combinando actividades presenciales y no presenciales. Las plazas disponibles son:\n\nPresencial: 30 plazas\nOnline: 50 plazas\n\nLa inscripción al curso es grauita a través de la plataforma MOOC-UCO Digital. Sin embargo, para obtener el certificado oficial de participación y reconocimiento de créditos, se recomienda encarecidamente el paso de la tasa correspondiente al final del curso.\nDado que el número de plazas es limitado, pedimos a los interesados que solo se inscriban si realmente podrán asistir. En caso de no poder participar, rogamos que lo comuniquen con la mayor antelación posible para que otra persona pueda ocupar su lugar.\n\n\n\n\n\n\nAtención\n\n\n\nSolo aquellos participantes que asistan al Summer School podrán obtener el certificado de participación, ya sea en la modalidad presencial u online."
+  },
+  {
+    "objectID": "index.html#organizadores-y-patrocinadores",
+    "href": "index.html#organizadores-y-patrocinadores",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "10 Organizadores y Patrocinadores",
+    "text": "10 Organizadores y Patrocinadores"
+  },
+  {
+    "objectID": "index.html#preguntas-frecuentes-faq",
+    "href": "index.html#preguntas-frecuentes-faq",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "11 Preguntas frecuentes (FAQ)",
+    "text": "11 Preguntas frecuentes (FAQ)\n\n\n\n\n\n\n Es grauito el curso?\n\n\n\n\n\nSí, la inscripción es gratuita a través de MOOC-UCO Digital. Sin embargo, para obtener el certificado oficial de participación y reconocimiento de créditos, se recomienda encarecidamente el pago de la tasa correspondiente.\n\n\n\n\n\n\n\n\n\n Cómo es la modalidad del curso?\n\n\n\n\n\nEl Summer School ofrece dos modalidades:\nPresencial: máximo de 30 plazas disponibles.\nOnline: máximo de 50 plazas disponibles.\n\n\n\n\n\n\n\n\n\n Qué ventajas tengo si asisto presencialmente en lugar de online?\n\n\n\n\n\n\nTendrás la oportunidad de participar de forma más interactiva en los workshops y las sesiones prácticas.\nConectar y hacer networking con otros participantes, investigadores y profesionales del sector.\nAcceder a actividades exclusivas, como la toma de datos en campo y el evento “Cervezas con ciencia.\nResolución de dudas y preguntas especializada.\n\n\n\n\n\n\n\n\n\n\n Qué ventajas tengo si asisto online en lugar de presencialmente?\n\n\n\n\n\n\nAcceder al contenido desde cualquier lugar, sin necesidad de desplazarte.\nAhorrar en costos de viaje y alojamiento sin perder el acceso a la formación especializada.\n\n\n\n\n\n\n\n\n\n\n Es obligatorio asistir para obtener el certificado?\n\n\n\n\n\nSí, solo quienes participen en el Summer School podrán obtener el certificado de reconocimiento y asistencia."
+  },
+  {
+    "objectID": "index.html#contacto",
+    "href": "index.html#contacto",
+    "title": "1º Summer School - Bosque Digital",
+    "section": "12 Contacto",
+    "text": "12 Contacto\nSi tienes alguna duda, puedes ponerte en contacto con nosotros a través del correo  info@mastergeoforest.es"
+  },
+  {
+    "objectID": "00_assets/partials/summary-card.html",
+    "href": "00_assets/partials/summary-card.html",
+    "title": "Summer School Bosque Digital",
     "section": "",
-    "text": "Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see https://quarto.org.\n\n1 + 1\n\n[1] 2"
+    "text": "Te interesa?\n\n\n\nFechas:\nOrganiza:\nLocalización:\nIdioma:\nCréditos:\nPrecio curso:\nCertificado:\n\n\n23 junio - 25 junio 2025\nUniversidad de Córdoba\nCórdoba, España\nEspañol\n5 ECTS\nGratis\n65,75€\n\n\nPreinscripción"
   }
 ]

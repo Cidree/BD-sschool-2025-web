@@ -1,3 +1,12 @@
+
+```{r}
+#| include: false
+library(dplyr)
+library(mapgl)
+library(sf)
+```
+
+
 ::::::::::: mapcard
 :::::::::: grid
 ::::::::: {.g-col-12 .g-col-lg-6}
@@ -47,6 +56,11 @@ Preinscripción {{< fa arrow-up-right-from-square >}}
 
 ::: {.g-col-12 .g-col-lg-6 .mapcard__map}
 ```{r}
+rabanales_sf <- st_point(c(-4.724533, 37.915041)) |> 
+  st_sfc(crs = 4326) |> 
+  st_as_sf() |> 
+  mutate(Edificio = "Edificio Da Vinci")
+
 maplibre() |> 
   fly_to(
     center = c(-4.724533, 37.915041),
