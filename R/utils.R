@@ -26,6 +26,14 @@ get_teacher_info <- function(dir) {
 
 
 teacher_card <- function(name, photo.dir, desc.dir, linkedin) {
+  if (name == "Ricardo E Hernandez-Lambraño") {
+    sel_icon <- "researchgate"
+    sel_text <- "ResearchGate"
+  } else {
+    sel_icon <- "linkedin"
+    sel_text <- "Linkedin"
+  }
+
   div(
     class = "teacher",
     div(
@@ -48,8 +56,8 @@ teacher_card <- function(name, photo.dir, desc.dir, linkedin) {
       class = "btn teacher__btn",
       tags$a(
         class = "teacher__btn-text",
-        tags$i(class = "fa-brands fa-linkedin", style = "margin-right: 8px;"),
-        "Linkedin",
+        tags$i(class = glue::glue("fa-brands fa-{sel_icon}"), style = "margin-right: 8px;"),
+        sel_text,
         href   = linkedin,
         style  = "text-decoration: none;",
         target = "_blank"

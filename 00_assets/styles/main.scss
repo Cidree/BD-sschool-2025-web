@@ -226,9 +226,14 @@ div.callout-warning.callout {
     align-items: center;
     text-align: center;
 
-    p {
+    & p {
       padding: 0.5rem;
       transition: font-size 0.2s ease-in-out;
+    }
+
+    & a {
+      text-decoration: none;
+      color: $color-light-green;
     }
 
     &:hover p,

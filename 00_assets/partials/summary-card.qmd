@@ -26,9 +26,7 @@ Idioma:
 
 Créditos:
 
-Precio curso:
-
-Certificado:
+Precio:
 :::
 
 ::: {.g-col-8 .mapcard__answ}
@@ -42,13 +40,11 @@ Español
 
 5 ECTS
 
-Gratis
-
-65,75€
+67,75€
 :::
 
 ::: {.g-col-12 .mapcard__btn .btn}
-Preinscripción {{< fa arrow-up-right-from-square >}}
+[Preinscripción {{< fa arrow-up-right-from-square >}}](https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/SSBD-encuesta/){target="_blank"}
 :::
 ::::::
 
