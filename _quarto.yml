@@ -53,6 +53,7 @@ section-divs: true
 ## TOC + sections --------------------
 toc: true
 toc-title: "Contenidos"
-toc-depth: 1
+toc-depth: 2
+number-depth: 2
 toc-location: right
 number-sections: true
