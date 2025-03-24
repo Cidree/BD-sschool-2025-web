@@ -245,7 +245,7 @@ maplibre(
   add_categorical_legend(
     legend_title = NULL,
     colors = c("red", "blue"),
-    values = c("Edificio Da Vinci", "Estación RENFE")
+    values = c("Edificio Da Vinci", "Estación RENFE de Rabanales")
   ) |> 
   add_navigation_control() |>
   add_fullscreen_control() |>
@@ -334,7 +334,7 @@ El curso ofrece una formación intensiva con una duración equivalente a **5 ETC
 
 La realización del curso tiene un coste de **67,75€** en ambas modalidades. El abono se realizará en el momento de la matriculación en el curso a través de la plataforma [MOOC-UCO Digital](https://ucoonline.uco.es/mooc/). El aprovechamiento del mismo incluye un **certificado oficial de participación y reconocimiento**.
 
-Inicialmente abriremos un período de preinscripción que no estará sujeto a ningún pago, y nos comunicaremos con los interesados por orden de petición para la realización de la matrícula. En caso de no poder participar, rogamos que lo comuniquen con la mayor antelación posible para que otra persona pueda ocupar su lugar.
+Inicialmente hemos abierto un [período de preinscripción](https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/preinscripcion-summer-school/){target="_blank"} que no estará sujeto a ningún pago, y nos comunicaremos con los interesados por orden de petición para la realización de la matrícula. En caso de no poder participar, rogamos que lo comuniquen con la mayor antelación posible para que otra persona pueda ocupar su lugar.
 
 ::: callout-important
 ## Atención
