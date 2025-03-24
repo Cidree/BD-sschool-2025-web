@@ -121,7 +121,9 @@ Este *Summer School* está dirigido a estudiantes, investigadores, profesionales
 
 ## Fechas clave
 
--   <b>30 de mayo</b>: fecha límite de inscripcion
+-   **25 marzo - 30 abril**: período de preinscripción
+
+-   **1 mayo - 30 mayo**: período de matrícula
 
 -   **23 de junio**: Día 1 Summer School - Herramientas Geoinformáticas
 
@@ -136,7 +138,7 @@ También se incluirá formación online a través de la plataforma Moodle de UCO
 
 ```{r}
 #| label: calendar
-#| fig-height: 7
+#| fig-height: 8
 img <- "https://i.pinimg.com/originals/10/1e/f6/101ef6a9e146b23de28fa2cd568ad17b.jpg"
 
 ## weekends
@@ -153,9 +155,10 @@ weekends <- year_days[weekdays(dates_2025) %in% c("sábado", "domingo")]
 
 ## special days
 events <- rep(NA, 365)
-events[weekends] <- "Fin de semana"
+events[weekends]   <- "Fin de semana"
 events[c(174:176)] <- "Summer School"
-events[c(150)] <- "Fecha límite"
+events[c(121:150)] <- "Matrícula"
+events[c(84:120)]  <- "Preinscripción"
 
 
 
@@ -164,11 +167,12 @@ calendR(
   mbg.col      = 4,       
   months.col   = "white",      
   special.days = events,  
-  special.col  = c("#DA9F93", "#CDCDCD", "#F28F3B"), 
+  special.col  = c("#CDCDCD", "#F8F272", "#F28F3B", "#86CB92"), 
   lty          = 0,                   
   weeknames    = c("Lu", "Ma", "Mi", "Ju", "Vi", "Sa", "Do"),
-  title.size   = 40,   
+  title.size   = 30,   
   orientation  = "p",
+  legend.pos = "top",
   bg.img       = img
 ) 
 ```
@@ -297,44 +301,6 @@ Inicialmente abriremos un período de preinscripción que no estará sujeto a ni
 Solo aquellos participantes que **asistan** al *Summer School* podrán obtener el certificado de participación, ya sea en la modalidad presencial u online.
 :::
 
-## Organizadores y Patrocinadores
-
-```{r}
-#| label: logos
-## read logo images
-logos_vec <- list.files(
-  "00_assets/figures/logos-corporativos/",
-  full.names = TRUE
-) |> 
-  sort()
-
-## read logo urls
-logo_url_tbl <- read_xlsx("00_assets/data/url-logos.xlsx") |> 
-  arrange(logo)
-
-## add HTML
-div(
-  class = "container grid",
-  map2(
-    logos_vec, 
-    logo_url_tbl$url,
-    \(logo, url) div(
-      class = "g-col-6 g-col-lg-4 logos",
-      div(
-        tags$a(
-          href   = url,
-          target = "_blank",
-          tags$img(
-            src   = logo,
-            alt   = "Imagen",
-            class = "logo__img"
-          )
-        )
-      )
-    )
-  )
-)
-```
 
 ## Preguntas frecuentes (FAQ)
 
@@ -389,3 +355,77 @@ Sí, solo quienes participen en el *Summer Schoo*l podrán obtener el certificad
 ## Contacto
 
 Si tienes alguna duda, puedes ponerte en contacto con nosotros a través del correo {{< fa envelope >}} [info\@mastergeoforest.es](mailto:info@mastergeoforest.es)
+
+### Organiza
+
+```{r}
+#| label: data_logos
+## read logo images
+logos_vec <- list.files(
+  "00_assets/figures/logos-corporativos/",
+  full.names = TRUE
+) |> 
+  sort()
+
+## read logo urls
+logo_url_tbl <- read_xlsx("00_assets/data/url-logos.xlsx") |> 
+  arrange(logo)
+
+## get ids
+organiza_id <- which(logo_url_tbl$obs == "organiza")
+```
+
+
+```{r}
+#| label: organiza_logos
+## add HTML
+div(
+  class = "container grid",
+  map2(
+    logos_vec[organiza_id], 
+    logo_url_tbl$url[organiza_id],
+    \(logo, url) div(
+      class = "g-col-12 g-col-lg-6 logos",
+      div(
+        tags$a(
+          href   = url,
+          target = "_blank",
+          tags$img(
+            src   = logo,
+            alt   = "Imagen",
+            class = "logo__img-organiza"
+          )
+        )
+      )
+    )
+  )
+)
+```
+
+### Colabora
+
+```{r}
+#| label: colabora_logos
+## add HTML
+div(
+  class = "container grid",
+  map2(
+    logos_vec[-organiza_id], 
+    logo_url_tbl$url[-organiza_id],
+    \(logo, url) div(
+      class = "g-col-6 g-col-lg-4 logos",
+      div(
+        tags$a(
+          href   = url,
+          target = "_blank",
+          tags$img(
+            src   = logo,
+            alt   = "Imagen",
+            class = "logo__img-colabora"
+          )
+        )
+      )
+    )
+  )
+)
+```

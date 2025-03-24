@@ -103,7 +103,7 @@ img {
     text-align: justify;
     padding-left: 1rem;
     padding-right: 1rem;
-    height: 20rem;
+    height: 16rem;
     transform: translateY(-8%);
     overflow: auto;
   }
@@ -160,7 +160,15 @@ img {
 }
 
 .logo__img {
-  height: 3.5rem;
+
+  &-organiza {
+    height: 5rem;
+  }
+
+  &-colabora {
+    height: 3.5rem;
+  }
+
 }
 
 // callouts
