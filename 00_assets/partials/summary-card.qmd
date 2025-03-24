@@ -44,7 +44,7 @@ Español
 :::
 
 ::: {.g-col-12 .mapcard__btn .btn}
-[Preinscripción {{< fa arrow-up-right-from-square >}}](https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/SSBD-encuesta/){target="_blank"}
+[Preinscripción {{< fa arrow-up-right-from-square >}}](https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/preinscripcion-summer-school/){target="_blank"}
 :::
 ::::::
 

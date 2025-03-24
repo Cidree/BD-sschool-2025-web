@@ -219,19 +219,60 @@ El *Summer School* Bosque Digital se realizará en el Campus Rabanales de la ciu
 #     data = rabanales_sf
 #   ) |> 
 #   add_globe_minimap()
+
+tren_sf <- st_point(c(-4.720533, 37.912541)) |> 
+  st_sfc(crs = 4326) |> 
+  st_as_sf() |> 
+  mutate(Renfe = "Estación RENFE")
+
+
 maplibre(
-  style = mapgl::maptiler_style("outdoor")
+  style   = mapgl::maptiler_style("outdoor"),
+  center  = c(-4.722533, 37.915041),
+  zoom    = 16,
+  pitch   = 45,
+  bearing = 18
 ) |>
-  fly_to(
-    center = c(-4.724533, 37.915041),
-    zoom   = 15
-  ) |>
   add_markers(
     data  = rabanales_sf,
     popup = "Edificio"
   ) |>
+  add_markers(
+    data  = tren_sf,
+    popup = "Renfe",
+    color = "blue"
+  ) |>
+  add_categorical_legend(
+    legend_title = NULL,
+    colors = c("red", "blue"),
+    values = c("Edificio Da Vinci", "Estación RENFE")
+  ) |> 
   add_navigation_control() |>
-  add_fullscreen_control()
+  add_fullscreen_control() |>
+  add_vector_source(
+    id = "openmaptiles",
+    url = paste0("https://api.maptiler.com/tiles/v3/tiles.json?key=",
+                 Sys.getenv("MAPTILER_API_KEY"))
+  ) |>
+  add_fill_extrusion_layer(
+    id = "3d-buildings",
+    source = 'openmaptiles',
+    source_layer = 'building',
+    fill_extrusion_color = mapgl::interpolate(
+      column = 'render_height',
+      values = c(0, 200, 400),
+      stops = c('lightgray', 'royalblue', 'lightblue')
+    ),
+    fill_extrusion_height = list(
+      'interpolate',
+      list('linear'),
+      list('zoom'),
+      15,
+      0,
+      16,
+      list('get', 'render_height')
+    )
+  )
 ```
 
 ::: {.callout-important collapse="true"}
