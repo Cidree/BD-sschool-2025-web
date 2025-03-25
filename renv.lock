@@ -1200,7 +1200,7 @@
     },
     "mapgl": {
       "Package": "mapgl",
-      "Version": "0.2.0",
+      "Version": "0.2.1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -1215,7 +1215,7 @@
         "shiny",
         "terra"
       ],
-      "Hash": "6adaf0c5fe6a45b2b11a5bed090686a4"
+      "Hash": "d3354b6f01ca0c7b542799867fa2d1b8"
     },
     "markdown": {
       "Package": "markdown",
