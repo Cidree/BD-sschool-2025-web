@@ -121,7 +121,7 @@ Este *Summer School* está dirigido a estudiantes, investigadores, profesionales
 
 ## Fechas clave
 
--   **25 marzo - 30 abril**: período de preinscripción
+-   **31 marzo - 30 abril**: período de preinscripción
 
 -   **1 mayo - 30 mayo**: período de matrícula
 
@@ -158,7 +158,7 @@ events <- rep(NA, 365)
 events[weekends]   <- "Fin de semana"
 events[c(174:176)] <- "Summer School"
 events[c(121:150)] <- "Matrícula"
-events[c(84:120)]  <- "Preinscripción"
+events[c(90:120)]  <- "Preinscripción"
 
 
 
