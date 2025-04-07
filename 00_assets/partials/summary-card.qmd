@@ -43,7 +43,7 @@ Español
 67,75€
 :::
 
-::: {.g-col-12 .mapcard__btn .btn onclick="window.open('https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/SSBD-preinscripcion/', '_blank')"}
+::: {.g-col-12 .mapcard__btn .btn onclick="window.open('https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/Summer-School-Preinscripcion/', '_blank')"}
 Preinscripción {{< fa arrow-up-right-from-square >}}
 :::
 
