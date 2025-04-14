@@ -28,7 +28,6 @@ library(terra)
 library(tidyverse)
 
 source("R/utils.R")
-
 knitr::knit_hooks$set(webgl = hook_webgl)
 ```
 
