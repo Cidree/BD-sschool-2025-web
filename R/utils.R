@@ -190,11 +190,11 @@ agenda_table <- function(sheet, subtitle = "*Día 1: Herramientas geoinformátic
     fmt_missing(missing_text = "")
 }
 
-# agenda_table(1) |>
-#   gtsave("00_assets/figures/agenda-d1.png")
-#
-# agenda_table(2, "*Dia 2: Teledetección e Inteligencia Artificial*") |>
-#   gtsave("00_assets/figures/agenda-d2.png")
-#
-# agenda_table(3, "*Dia 3: Teledetección próxima a la Tierra*") |>
-#   gtsave("00_assets/figures/agenda-d3.png")
+agenda_table(1) |>
+  gtsave("00_assets/figures/agenda-d1.png")
+
+agenda_table(2, "*Dia 2: Teledetección e Inteligencia Artificial*") |>
+  gtsave("00_assets/figures/agenda-d2.png")
+
+agenda_table(3, "*Dia 3: Teledetección próxima a la Tierra*") |>
+  gtsave("00_assets/figures/agenda-d3.png")
