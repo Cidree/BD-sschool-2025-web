@@ -32,7 +32,7 @@ Precio:
 ::: {.g-col-8 .mapcard__answ}
 23 junio - 25 junio 2025
 
-Universidad de Córdoba
+Máster Geoforest
 
 Córdoba, España
 
@@ -40,11 +40,11 @@ Español
 
 5 ECTS
 
-67,75€
+Gratuito
 :::
 
-::: {.g-col-12 .mapcard__btn .btn onclick="window.open('https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/Summer-School-Preinscripcion/', '_blank')"}
-Preinscripción {{< fa arrow-up-right-from-square >}}
+::: {.g-col-12 .mapcard__btn .btn onclick="window.open('https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/SSBD-matricula/', '_blank')"}
+Matrícula {{< fa arrow-up-right-from-square >}}
 :::
 
 ::::::

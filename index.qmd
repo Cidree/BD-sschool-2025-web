@@ -94,6 +94,8 @@ Este *Summer School* es una oportunidad única para adquirir competencias práct
 
 ```{r}
 #| label: read_lidar
+#| message: false
+#| include: false
 ## load lidar
 lid_las <- readLAS("00_assets/data/lidar-tenerife.laz")
 
@@ -122,7 +124,9 @@ Este *Summer School* está dirigido a estudiantes, investigadores, profesionales
 
 -   **1 abril - 30 abril**: período de preinscripción
 
--   **1 mayo - 30 mayo**: período de matrícula
+-   **1 mayo - 18 mayo**: período de matrícula para preinscritos
+
+-   **19 mayo - 30 mayo**: período de matrícula para el resto de interesados
 
 -   **23 de junio**: Día 1 Summer School - Herramientas Geoinformáticas
 
@@ -331,9 +335,11 @@ El curso ofrece una formación intensiva con una duración equivalente a **5 ETC
 
 -   **Online**: 50 plazas
 
-La realización del curso tiene un coste de **67,75€** en ambas modalidades. El aprovechamiento del mismo incluye un **certificado oficial de participación y reconocimiento**.
+La realización del curso tiene un coste de **0€** en ambas modalidades. El aprovechamiento del mismo incluye un **certificado de participación**.
 
-Inicialmente hemos abierto un [período de preinscripción](https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/Summer-School-Preinscripcion/){target="_blank"} que no estará sujeto a ningún pago, y nos comunicaremos con los interesados por orden de petición para la realización de la matrícula. En caso de no poder participar, rogamos que lo comuniquen con la mayor antelación posible para que otra persona pueda ocupar su lugar.
+Puedes realizar la matrícula en [este enlace](https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/Summer-School-Preinscripcion/){target="_blank"}.
+
+<!-- Inicialmente hemos abierto un [período de preinscripción](https://hdzvlf-adrian-cidre0gonz0lez.shinyapps.io/Summer-School-Preinscripcion/){target="_blank"} que no estará sujeto a ningún pago, y nos comunicaremos con los interesados por orden de petición para la realización de la matrícula. En caso de no poder participar, rogamos que lo comuniquen con la mayor antelación posible para que otra persona pueda ocupar su lugar. -->
 
 ::: callout-important
 ## Atención
@@ -347,13 +353,13 @@ Solo aquellos participantes que **asistan** al *Summer School* podrán obtener e
 ::: {.callout-note icon="false" collapse="true"}
 ## {{< fa circle-question >}} **Cuál es el coste del curso?**
 
-El curso tiene un reconocimiento de 5 ECTS, con un precio de 13,15€ por ECTS. Esto suma un total de 65.75€ de coste por el curso.
+El curso lo organiza el Máster Universitario en Geomática, Teledetección y modelos espaciales aplicado a la gestión forestal de la Universidad de Córdoba y se ofrece de forma gratuita.
 :::
 
 ::: {.callout-note icon="false" collapse="true"}
 ## {{< fa circle-question >}} **Recibiré alguna certificación al finalizar el curso?**
 
-Sí, tanto los alumnos que asistar presencialmente como los que lo hagan de forma remota recibirán un certificado oficial emitido por la Universidad de Córdoba.
+Sí, tanto los alumnos que asistan presencialmente como los que lo hagan de forma remota recibirán un certificado emitido por el Máster Geoforest.
 :::
 
 ::: {.callout-note icon="false" collapse="true"}
@@ -391,6 +397,8 @@ El *Summer School* ofrece dos modalidades:
 
 Sí, solo quienes participen en el *Summer School* podrán obtener el certificado de reconocimiento y asistencia.
 :::
+
+
 
 ## Contacto
 
