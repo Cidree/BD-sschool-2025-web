@@ -24,8 +24,6 @@ Localización:
 
 Idioma:
 
-Créditos:
-
 Precio:
 :::
 
@@ -37,8 +35,6 @@ Máster Geoforest
 Córdoba, España
 
 Español
-
-5 ECTS
 
 Gratuito
 :::
