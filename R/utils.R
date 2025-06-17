@@ -28,7 +28,8 @@ get_teacher_info <- function(dir) {
 teacher_card <- function(name, photo.dir, desc.dir, linkedin) {
   if (name %in% c(
     "Ricardo E Hernandez-Lambraño",
-    "Rafael M Navarro Cerrillo"
+    "Rafael M Navarro Cerrillo",
+    "Pablo Gonzalez-Moreno"
   )) {
     sel_icon <- "researchgate"
     sel_text <- "ResearchGate"
